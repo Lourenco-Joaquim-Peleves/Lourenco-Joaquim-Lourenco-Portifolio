@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício nº 8 - Netscape</title>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 3px;
+            background-color: #dcdcdc; /* Fundo cinza das bordas */
+            border: 2px solid #808080;
+            font-family: "Times New Roman", serif;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        td, th {
+            background-color: #d8d424; /* Amarelo da tabela */
+            border: 2px outset #ffffff;
+            padding: 6px 12px;
+            color: #000000;
+        }
+
+        caption {
+            caption-side: bottom;
+            margin-top: 6px;
+            font-family: "Times New Roman", serif;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <!-- 1. Linha do Topo: Demografia e Professor -->
+        <tr>
+            <td colspan="2" style="background-color: transparent; border: none;"></td>
+            <th colspan="2">Demografia</th>
+            <th>Professor</th>
+        </tr>
+
+        <!-- 2. Linha dos Cabeçalhos: Homens e Meninas -->
+        <tr>
+            <td colspan="2" style="background-color: transparent; border: none;"></td>
+            <th>Homens</th>
+            <th>Meninas</th>
+            <td rowspan="1" style="display:none;"></td> <!-- Ajuste de estrutura -->
+        </tr>
+
+        <!-- 3. Turma A -->
+        <tr>
+            <td rowspan="4">Turmas</td>
+            <td>A</td>
+            <td>20</td>
+            <td>5</td>
+            <td>João<br>Pedro</td>
+        </tr>
+
+        <!-- 4. Turma B -->
+        <tr>
+            <td>B</td>
+            <td>21</td>
+            <td>3</td>
+            <td>idem</td>
+        </tr>
+
+        <!-- 5. Turma C -->
+        <tr>
+            <td>C</td>
+            <td>25</td>
+            <td>2</td>
+            <td>Maria<br>joão</td>
+        </tr>
+
+        <!-- 6. Turma D -->
+        <tr>
+            <td>D</td>
+            <td>20</td>
+            <td>4</td>
+            <td>idem</td>
+        </tr>
+
+        <!-- 7. Linha do Total -->
+        <tr>
+            <td colspan="2">Total</td>
+            <td>86</td>
+            <td>4</td>
+            <td>2</td>
+        </tr>
+
+        <caption>Tabela 1. Estatísticas.</caption>
+    </table>
+
+</body>
+</html>

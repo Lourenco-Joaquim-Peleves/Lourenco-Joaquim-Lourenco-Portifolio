@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Lourenço J Lourenço</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><span>Portfolio </span>Académico</div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobremim.html.html">Sobre Mim</a></li>
+                <li><a href="formacao.html">Formação</li></a>
+                <li><a href="competencias.html">Competências Técnicas</a></li>
+                <li><a href="projetos.html">Projetos realizados</a></li>
+                <li><a href="contacto.html" class="active">Contacto e redes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+  <section class="section">
+    <h1 class="page-title">Canais de Contacto</h1>
+
+    <div class="contact-wrapper">
+      
+      <!-- CARTÃO 1: INFORMAÇÕES DIRETAS -->
+      <div class="contact-card">
+        <h3>Informações Diretas</h3>
+        <p><strong>Nome:</strong> Lourenço J Lourenço</p>
+        <p><strong>Localização:</strong> Moçambique / Matola / Intaka</p>
+        <p><strong>Email:</strong> app019734@gmail.com</p>
+      </div>
+
+      <!-- CARTÃO 2: REDES SOCIAIS -->
+      <div class="contact-card">
+        <h3>Redes Sociais & Plataformas</h3>
+        <div class="social-buttons">
+          <a href="https://www.facebook.com/profile.php?id=61557386213361" target="_blank" class="btn-social btn-facebook">
+            <i class="fa-brands fa-facebook-f"></i> Facebook
+          </a>
+          
+          <a href="https://www.instagram.com/peleves3?stkn=cHFyMDdxbZBnbR1" target="_blank" class="btn-social btn-instagram">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          
+          <a href="https://wa.me/258857127297" target="_blank" class="btn-social btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- INQUÉRITO / FORMULÁRIO DE CONTACTO PARA O E-MAIL -->
+    <div class="contact-card form-card">
+      <h3>Inquérito / Enviar Mensagem</h3>
+      <p class="form-description">Preencha o formulário abaixo para enviar uma mensagem diretamente para o meu e-mail.</p>
+      
+      <!-- Usamos o serviço gratuito FormSubmit para processar e enviar para o seu e-mail -->
+      <form action="https://formsubmit.co/app019734@gmail.com" method="POST" class="contact-form">
+        
+        <!-- Campo Nome -->
+        <div class="form-group">
+          <label for="nome">Seu Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
+        </div>
+
+        <!-- Campo E-mail do remetente -->
+        <div class="form-group">
+          <label for="email">Seu E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+
+        <!-- Campo Assunto -->
+        <div class="form-group">
+          <label for="assunto">Assunto:</label>
+          <input type="text" id="assunto" name="assunto" placeholder="Ex: Proposta de Trabalho / Dúvida" required>
+        </div>
+
+        <!-- Campo Mensagem -->
+        <div class="form-group">
+          <label for="mensagem">Mensagem / Inquérito:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui a sua mensagem..." required></textarea>
+        </div>
+
+        <!-- Configuração para evitar Spam e redirecionar -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Botão de Envio -->
+        <button type="submit" class="btn-submit">
+          <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem
+        </button>
+      </form>
+    </div>
+
+  </section>
+</main>
+    <footer class="footer">
+        <p>&copy; 2026 Lourenço J Lourenço. Portfólio Académico de Suporte Informático.</p>
+    </footer>
+
+</body>
+</html>
+
+

@@ -1,0 +1,786 @@
+/* RESET BÁSICO */
+{
+    Margin: 0;
+    Padding: 0;
+    Box-sizing: border-box;
+    Font-family: ‘Segoe UI’, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+Body {
+    Background-color: #0f4986;
+    Color: #e0e1dd;
+    Line-height: 1.6;
+    Display: flex;
+    Flex-direction: column;
+    Min-height: 100vh;
+}
+
+/* CABEÇALHO E MENU */
+.header {
+    Background-color: #1b263b;
+    Padding: 1rem 2rem;
+    Display: flex;
+    Justify-content: space-between;
+    Align-items: center;
+    Box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.logo {
+    Font-size: 1.2rem;
+    Font-weight: bold;
+    Color: #ffffff;
+}
+
+.logo span {
+    Color: #778da9;
+    Font-weight: normal;
+}
+
+.nav-menu ul {
+    Display: flex;
+    List-style: none;
+    Gap: 1.5rem;
+}
+
+.nav-menu a {
+    Color: #e0e1dd;
+    Text-decoration: none;
+    Font-weight: 500;
+    Padding: 0.5rem 1rem;
+    Border-radius: 5px;
+    Transition: background 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    Background-color: #28c6d1;
+    Color: #ffffff;
+}
+
+
+
+
+
+.profile-photo {
+    Width: 180px;
+    Height: 180px;
+    Border-radius: 50%;
+    Background-color: #415a77;
+    Display: flex;
+    Justify-content: center;
+    Align-items: center;
+    Overflow: hidden;
+    Border: 3px solid #778da9;
+    Flex-shrink: 0;
+}
+
+.profile-photo img {
+    Width: 100%;
+    Height: 100%;
+    Object-fit: cover;
+}
+
+.profile-details {
+    Display: flex;
+    Flex-direction: column;
+    Gap: 0.8rem;
+}
+
+.badge {
+    Background-color: #415a77;
+    Color: #e0e1dd;
+    Padding: 0.3rem 0.8rem;
+    Border-radius: 20px;
+    Font-size: 0.85rem;
+    Width: fit-content;
+}
+
+.profile-details h1 {
+    Font-size: 2rem;
+    Color: #ffffff;
+}
+
+.curso-info {
+    Color: #778da9;
+}
+
+.bio {
+    Margin-bottom: 0.5rem;
+}
+
+/* BOTÕES */
+.btn {
+    Display: inline-block;
+    Padding: 0.75rem 1.5rem;
+    Border-radius: 6px;
+    Text-decoration: none;
+    Font-weight: bold;
+    Width: fit-content;
+    Transition: transform 0.2s, background 0.3s;
+}
+
+.btn-primary {
+    Background-color: #778da9;
+    Color: #0d1b2a;
+}
+
+.btn-primary:hover {
+    Background-color: #e0e1dd;
+    Transform: translateY(-2px);
+}
+
+/* RODAPÉ */
+.footer {
+    Background-color: #1b263b;
+    Text-align: center;
+    Padding: 1.2rem;
+    Margin-top: auto;
+    Font-size: 0.9rem;
+    Color: #778da9;
+}
+
+.profile-photo {
+    Width: 180px;          /* Ajusta a largura da foto (podes aumentar ou diminuir este valor) */
+    Height: 180px;         /* Mantém igual à largura para ser um quadrado perfeito */
+    Border-radius: 50%;    /* Faz a foto ficar redonda */
+    Overflow: hidden;      /* Corta qualquer parte da imagem que saia fora do círculo */
+    Flex-shrink: 0;        /* Impede que a foto seja esmagada no ecra */
+    Border: 4px solid #00d2ff; /* Opcional: moldura ao redor da foto */
+    margin: 0 auto 15px auto;/*Centraliza a foto*/
+}
+.profile-photo img {
+    Width: 100%;
+    Height: 100%;
+    Object-fit: cover;     /* Ajusta a imagem sem esticar nem deformar */
+}
+.home-photo {
+    Width: 170px; /*Aumenta a largura da foto*/
+    height: 170px; /*Aumenta a altura da foto*/
+    max-width: 180px !important;
+    max-height: 180px !important;
+    border-radius:50%; /*Deixa a foto redonda*/
+    overflow: hidden; /*Corta qualquer sobra da imagem*/
+    border: 4px solid #00d2ff; /*Cria borda azul elegante*/
+    box-shadow: 0 4px 15px rgb(8, 127, 206); /*Adiciona uma sombra suave*/
+    margin: 0 auto 30px auto; /*Centraliza a foto*/
+    }
+.home-photo img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;/*Enquadra a foto perfeitamente*/
+    object-position: center 15% !important;/*Foca no meu rosto*/
+    display: block !important;
+    }
+    /*Organizacao dos cartoe*/
+.grid-skills {
+    display: flex;
+    flex-wrap: wrap; /*Quebra linhas e transforma em telas menores */
+    gap: 30px 15px; /*Espaço entre os cartoes*/
+    justify-content: center ; /*Centraliza os cartoes*/
+    margin-top: 30px;
+    }
+    /*Cada cartao separado*/
+.skill-card {
+    background-color: #161b22;/*cor do fundo do cartao*/
+    border:1px solid #30363d;/*Borda n muito visivel*/
+    border-radius: 10px; /* pontas redondas dos cartoes*/ 
+    padding:25px; /*space interno*/
+    width: 280px;/* largura do card*/
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);/*Cria sombra*/
+    transition: transform 0.3s ease, border-color 0.3 ease;
+}
+/*Efeito do mouse*/
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color:#00d2ff;/*cria bordas azuis ao passar o mouse*/
+}
+/*Titulos*/
+.skill-card h3{
+    color:#00d2ff;
+    font-size: 1.2rem;
+    margin: bottom 15px;
+    border-bottom: 2px solid #30363d;
+    padding-bottom: 8px;
+}
+/*A lista nos cartoes*/
+.skill-card ul{
+    color: #c9d1d9;
+    margin-bottom:10px;
+    font-size:0.95rem;
+    position: relative;
+    padding-left: 18px;
+}
+.about-me-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff; /* Ou a cor de fundo do seu tema */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333333;
+}
+
+.about-me-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #0056b3; /* Cor dos seus títulos */
+    border-bottom: 2px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.about-me-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+/* ====================================
+   ESTILO DA APRESENTAÇÃO (ESTILO ONORIO)
+   ==================================== */
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  gap: 40px;
+}
+
+/* Lado Esquerdo: Texto */
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-name {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 8px;
+}
+
+.hero-location {
+  font-size: 0.95rem;
+  color: #888888;
+  margin-bottom: 25px;
+}
+
+.btn-ver-mais {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.btn-ver-mais:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Lado Direito: Foto Retangular */
+.hero-photo-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 420px;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+/* ====================================
+   PÁGINA SOBRE MIM (INDEX.HTML)
+   ==================================== */
+
+.about-page-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+
+/* Coluna da Esquerda */
+.about-sidebar {
+  flex: 1;
+  max-width: 320px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-photo-card {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #00d2ff;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-quick-info h2 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.about-quick-info .badge {
+  background-color: #1f6feb;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.about-quick-info .course-title {
+  color: #00d2ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.about-quick-info .institution {
+  color: #8b949e;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Coluna da Direita (História / Cartão Maior) */
+.about-content-card {
+  flex: 2;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-content-card .section-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #00d2ff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.bio-text p {
+  color: #c9d1d9;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.bio-text strong {
+  color: #ffffff;
+}
+
+.about-actions {
+  margin-top: 30px;
+}
+/* ====================================
+   PÁGINA SOBRE MIM (INDEX.HTML)
+   ==================================== */
+
+.about-page-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  align-items: flex-start;
+}
+
+/* Coluna da Esquerda */
+.about-sidebar {
+  flex: 1;
+  max-width: 320px;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-photo-card {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #00d2ff;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-quick-info h2 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.about-quick-info .badge {
+  background-color: #1f6feb;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.about-quick-info .course-title {
+  color: #00d2ff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.about-quick-info .institution {
+  color: #8b949e;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Coluna da Direita (História / Cartão Maior) */
+.about-content-card {
+  flex: 2;
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-content-card .section-title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #00d2ff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.bio-text p {
+  color: #c9d1d9;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.bio-text strong {
+  color: #ffffff;
+}
+
+.about-actions {
+  margin-top: 30px;
+}
+/* Container da Grelha de Projetos */
+.grid-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Títulos de Categoria (ocupam a largura toda da grelha) */
+.category-title {
+  grid-column: 1 / -1;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+/* Cartão Individual de Cada Projeto */
+.project-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tech-tag {
+  color: #8b949e;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.project-card h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #c9d1d9;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Botões/Links dentro dos Cartões */
+.btn-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.action-container {
+  text-align: center;
+  margin-top: 40px;
+}
+/* ===================================================
+   PÁGINA DE FORMAÇÃO (formacao.html)
+   =================================================== */
+
+.education-block {
+  Margin-bottom: 40px;
+}
+
+/* Linha do tempo / Timeline */
+.timeline {
+  Display: flex;
+  Flex-direction: column;
+  Gap: 20px;
+  Margin-top: 20px;
+  Border-left: 2px solid #30363d;
+  Padding-left: 20px;
+}
+
+.timeline-item {
+  Position: relative;
+  Background-color: #161b22;
+  Border: 1px solid #30363d;
+  Border-radius: 8px;
+  Padding: 20px;
+  Transition: border-color 0.3s ease;
+}
+
+.timeline-item:hover {
+  Border-color: #58a6ff;
+}
+
+/* Ponto marcador da linha do tempo */
+.timeline-item::before {
+  Content: ‘’;
+  Position: absolute;
+  Left: -27px;
+  Top: 25px;
+  Width: 12px;
+  Height: 12px;
+  Background-color: #58a6ff;
+  Border-radius: 50%;
+  Border: 2px solid #0d1117;
+}
+
+.timeline-year {
+  Display: inline-block;
+  Font-size: 0.85rem;
+  Font-weight: bold;
+  Color: #58a6ff;
+  Margin-bottom: 5px;
+}
+
+.timeline-content h3 {
+  Color: #ffffff;
+  Font-size: 1.1rem;
+  Margin-bottom: 5px;
+}
+
+.institution {
+  Color: #8b949e;
+  Font-size: 0.95rem;
+  Margin-bottom: 10px;
+}
+
+/* Badges de estado */
+.status-badge {
+  Display: inline-block;
+  Padding: 3px 8px;
+  Font-size: 0.75rem;
+  Font-weight: bold;
+  Border-radius: 12px;
+  Background-color: rgba(56, 139, 253, 0.15);
+  Color: #58a6ff;
+  Border: 1px solid rgba(56, 139, 253, 0.4);
+}
+
+.status-badge.completed {
+  Background-color: rgba(46, 160, 67, 0.15);
+  Color: #3fb950;
+  Border: 1px solid rgba(46, 160, 67, 0.4);
+}
+/* ===================================================
+   PÁGINA DE CONTACTOS & FORMULÁRIO (contacto.html)
+   =================================================== */
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.contact-card h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 5px;
+}
+
+.contact-card p {
+  color: #c9d1d9;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* --- Botões das Redes Sociais --- */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-social:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Cores Oficiais das Marcas */
+.btn-facebook {
+  background-color: #1877f2;
+}
+
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+}
+
+/* --- Formulario / Inquerito --- */
+.form-card {
+  margin-top: 20px;
+}
+
+.form-description {
+  margin-bottom: 20px;
+  color: #8b949e;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #58a6ff;
+}
+
+.btn-submit {
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #2ea043;
+}

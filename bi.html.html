@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>B.I. Moçambique - Réplica</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      padding: 30px 0;
+    }
+
+    /* Base do Cartão */
+    .bi-card {
+      width: 450px;
+      height: 280px;
+      background-color: #d1f2d9;
+      border-radius: 12px;
+      padding: 12px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      border: 1px solid #99c2a2;
+    }
+
+    /* Cabeçalho */
+    .header {
+      text-align: center;
+      position: relative;
+    }
+
+    .flag-img {
+      width: 35px;
+      height: 22px;
+      position: absolute;
+      right: 5px;
+      top: 0;
+      object-fit: cover;
+      border: 1px solid #999;
+    }
+
+    .header h1 { font-size: 13px; color: #111; }
+    .header h2 { font-size: 11px; color: #222; margin-top: 2px; }
+    .header .doc-num { font-size: 11px; font-weight: bold; margin-top: 2px; }
+
+    /* Fotos */
+    .photo-main {
+      width: 95px;
+      height: 120px;
+      border: 1px solid #666;
+      position: absolute;
+      top: 65px;
+      left: 12px;
+      overflow: hidden;
+    }
+
+    .photo-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-ghost {
+      width: 50px;
+      height: 65px;
+      position: absolute;
+      top: 105px;
+      right: 15px;
+      overflow: hidden;
+      opacity: 0.35;
+    }
+
+    .photo-ghost img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Informações */
+    .info-front {
+      position: absolute;
+      top: 65px;
+      left: 118px;
+      width: 250px;
+    }
+
+    .info-back {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      right: 15px;
+    }
+
+    .chip {
+      width: 50px;
+      height: 40px;
+      background: linear-gradient(135deg, #ffd700, #daa520);
+      border-radius: 6px;
+      border: 1px solid #b8860b;
+      position: absolute;
+      top: 90px;
+      left: 20px;
+    }
+
+    .mrz-code {
+      position: absolute;
+      bottom: 12px;
+      left: 15px;
+      right: 15px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color: #222;
+      line-height: 1.2;
+    }
+
+    .field { margin-bottom: 4px; }
+    .label { font-size: 7.5px; color: #444; display: block; }
+    .value { font-size: 10px; font-weight: bold; color: #000; text-transform: uppercase; }
+    .row { display: flex; gap: 20px; }
+
+    /* Configuração para Impressão / PDF */
+    @media print {
+      body { background: none; padding: 0; }
+      .bi-card {
+        box-shadow: none;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- FRENTE -->
+  <div class="bi-card">
+    <div class="header">
+      <img src="bandeira.svg.webp" alt="Bandeira" class="flag-img">
+      <h1>REPÚBLICA DE MOÇAMBIQUE</h1>
+      <h2>BILHETE DE IDENTIDADE</h2>
+      <div class="doc-num">Nº: 090108891011S</div>
+    </div>
+
+    <div class="photo-main">
+      <img src="foto.jpg.jpeg" alt="Foto de Perfil">
+    </div>
+
+    <div class="info-front">
+      <div class="field">
+        <span class="label">Nome / Name:</span>
+        <span class="value">LOURENÇO JOAQUIM LOURENÇO</span>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <span class="label">Data de Nascimento / Date of Birth:</span>
+          <span class="value">03/11/2009</span>
+        </div>
+        <div class="field">
+          <span class="label">Altura / Height: 1,40 m</span>
+          <span class="label">Sexo / Sex: M</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="label">Naturalidade / Place of Birth:</span>
+        <span class="value">XAI-XAI</span>
+      </div>
+
+      <div class="field">
+        <span class="label">Local de Residência / Address:</span>
+        <span class="value">Q-10 CASA20<br>INTAKA<br>MATOLA</span>
+      </div>
+    </div>
+
+    <div class="photo-ghost">
+      <img src="foto.jpg.jpeg" alt="Foto Fantasma">
+    </div>
+  </div>
+
+  <!-- VERSO -->
+  <div class="bi-card">
+    <div class="info-back">
+      <div class="row">
+        <div class="field">
+          <span class="label">Data de Emissão / Issuance Date:</span>
+          <span class="value">31/12/2021</span>
+        </div>
+        <div class="field">
+          <span class="label">Válido Até / Expiry Date:</span>
+          <span class="value">30/12/2026</span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <span class="label">Emitido Em / Issued In:</span>
+          <span class="value">CIDADE DE MATOLA</span>
+        </div>
+        <div class="field">
+          <span class="label">Estado Civil / Marital Status:</span>
+          <span class="value">SOLTEIRO</span>
+        </div>
+      </div>
+
+      <div style="margin-left: 70px; margin-top: 5px;">
+        <div class="field">
+          <span class="label">Nome do Pai / Father Name:</span>
+          <span class="value">JOAQUIM LOURENÇO</span>
+        </div>
+
+        <div class="field">
+          <span class="label">Nome da Mãe / Mother Name:</span>
+          <span class="value">ELISA NOSTA MANINGUANE</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chip"></div>
+
+    <div class="mrz-code">
+      IDMOZAA27604085090108891011S&lt;&lt; &nbsp;<br>
+      0911038M2612306MOZ&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;0<br>
+      LOURENCO&lt;&lt;LOURENCO&lt;JOAQUIM&lt;&lt;&lt;&lt;
+    </div>
+  </div>
+
+</body>
+</html>
